@@ -5,7 +5,6 @@ var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
 module.exports = {
   devtool: 'source-map',
-  debug: true,
 
   entry: {
     'angular2': [
@@ -23,7 +22,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['.ts', '.js']
   },
 
   module: {
@@ -34,12 +33,12 @@ module.exports = {
       },
       {
         test: /\.html$/,
-	loader: 'html'
+	loader: 'html-loader'
       },
       {
         test: /\.css$/,
 	include: __dirname + '/src/app/',
-	loader: 'raw'
+	loader: 'raw-loader'
       }
     ]
   },
