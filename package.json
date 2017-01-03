@@ -1,0 +1,43 @@
+{
+  "name": "webpack-electron-angular2",
+  "version": "0.0.1",
+  "description": "Demo electron app with angular2 and webpack.",
+  "main": "main.js",
+  "author": "weichen2046@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack && gulp build",
+    "webpack": "webpack --progress --profile --colors --display-error-details --display-cached",
+    "gulp": "gulp",
+    "start": "electron dist"
+  },
+  "dependencies": {
+    "@angular/common": "^2.4.1",
+    "@angular/compiler": "^2.4.1",
+    "@angular/core": "^2.4.1",
+    "@angular/forms": "^2.4.1",
+    "@angular/http": "^2.4.1",
+    "@angular/platform-browser": "^2.4.1",
+    "@angular/platform-browser-dynamic": "^2.4.1",
+    "core-js": "^2.4.1",
+    "electron": "^1.4.13",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "^2.4.1",
+    "@types/jasmine": "^2.5.40",
+    "@types/node": "^6.0.55",
+    "angular-cli": "^1.0.0-beta.24",
+    "angular2-template-loader": "^0.6.0",
+    "awesome-typescript-loader": "^3.0.0-beta.17",
+    "gulp": "^3.9.1",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.25.0",
+    "jasmine-core": "^2.5.2",
+    "jasmine-spec-reporter": "^2.7.0",
+    "rxjs": "^5.0.2",
+    "ts-node": "^2.0.0",
+    "typescript": "^2.1.4",
+    "webpack": "^1.14.0"
+  }
+}
