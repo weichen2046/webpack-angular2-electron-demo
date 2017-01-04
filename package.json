@@ -6,7 +6,7 @@
   "author": "weichen2046@gmail.com",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build": "rimraf dist/ && webpack",
     "webpack": "webpack --progress --profile --colors --display-error-details --display-cached",
     "start": "electron dist"
   },
@@ -35,6 +35,7 @@
     "html-webpack-plugin": "^2.25.0",
     "jasmine-core": "^2.5.2",
     "jasmine-spec-reporter": "^2.7.0",
+    "rimraf": "^2.5.4",
     "rxjs": "^5.0.2",
     "ts-node": "^2.0.0",
     "typescript": "^2.1.4",
