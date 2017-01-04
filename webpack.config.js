@@ -1,7 +1,8 @@
-var path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var path = require('path');
+var webpack = require('webpack');
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -39,7 +40,7 @@ module.exports = {
         test: /\.css$/,
 	include: __dirname + '/src/app/',
 	loader: 'raw-loader'
-      }
+      },
     ]
   },
 
@@ -47,6 +48,7 @@ module.exports = {
     new CommonsChunkPlugin({name: 'angular2', filename: 'angular2.js', minChunks: Infinity}),
     new CommonsChunkPlugin({name: 'common', filename: 'common.js'}),
     new HtmlWebpackPlugin({template: 'src/index.html', chunksSortMode: 'dependency'}),
+    new CopyWebpackPlugin([{from: 'src/package.json'}, {from: 'src/main.js'}]),
   ],
 
   target: 'electron-renderer'

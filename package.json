@@ -6,9 +6,8 @@
   "author": "weichen2046@gmail.com",
   "license": "MIT",
   "scripts": {
-    "build": "webpack && gulp build",
+    "build": "webpack",
     "webpack": "webpack --progress --profile --colors --display-error-details --display-cached",
-    "gulp": "gulp",
     "start": "electron dist"
   },
   "dependencies": {
@@ -31,7 +30,7 @@
     "angular-cli": "^1.0.0-beta.24",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^3.0.0-beta.17",
-    "gulp": "^3.9.1",
+    "copy-webpack-plugin": "^4.0.1",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.25.0",
     "jasmine-core": "^2.5.2",
